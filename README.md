@@ -14,17 +14,21 @@ A modern full-stack energy dashboard for metering point consumption and cost ana
 
 ## How to Run Locally
 
-### 1. Clone the Repository
+
+### 1. Clone repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/enefit-energy-app.git
 cd enefit-energy-app
-
+```
 
 ### 2. Docker-compose (run backend)
+```bash
 docker-compose up --build
-
+```
 
 ### 3. Run frontend
+```bash
 cd /frontend
 npm run dev
+```
