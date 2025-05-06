@@ -20,7 +20,11 @@ A modern full-stack energy dashboard for metering point consumption and cost ana
 git clone https://github.com/YOUR_USERNAME/enefit-energy-app.git
 cd enefit-energy-app
 
+
+### 2. Docker-compose (run backend)
 docker-compose up --build
 
+
+### 3. Run frontend
 cd /frontend
 npm run dev
