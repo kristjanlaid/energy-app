@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: enefit-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: enefit_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+    container_name: enefit-backend
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+
+volumes:
+  pgdata:
